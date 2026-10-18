@@ -510,6 +510,17 @@ h2 {
   font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
+.site-credit {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 24px;
+  z-index: 1;
+  margin: 0;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  text-shadow: var(--text-shadow-over-imagery);
+}
+
 .get-in-touch-links {
   display: flex;
   flex-wrap: wrap;
@@ -788,5 +799,10 @@ html:has(.photo-viewer[open]) {
 
   .about-inner {
     grid-template-columns: minmax(0, 420px);
+  }
+
+  .site-credit {
+    left: var(--gutter);
+    text-align: center;
   }
 }
