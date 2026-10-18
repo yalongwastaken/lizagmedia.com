@@ -147,7 +147,9 @@ h2 {
 }
 
 .hero h1 {
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .hero-subline {
@@ -166,6 +168,9 @@ h2 {
   z-index: 1;
   left: var(--gutter);
   top: 50%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
   margin: 0;
   writing-mode: vertical-rl;
   transform: translateY(-50%) rotate(180deg);
@@ -184,10 +189,8 @@ h2 {
 
 .side-label::before {
   content: "";
-  display: inline-block;
   width: 1px;
   height: 96px;
-  margin-block-start: 16px;
   background: currentColor;
   box-shadow: 0 0 3px var(--background);
 }
