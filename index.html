@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liza Garcia</title>
+  <meta name="description" content="Placeholder: one line about Liza and the places she has been.">
+  <meta property="og:title" content="Liza Garcia">
+  <meta property="og:description" content="Placeholder: one line about Liza and the places she has been.">
+  <meta property="og:image" content="https://lizagmedia.com/images/hero.jpg">
+  <meta property="og:url" content="https://lizagmedia.com">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="vendor/maplibre-gl/maplibre-gl.css">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="site-header.js"></script>
+  <script type="module" src="places.js"></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="#top">Liza Garcia</a>
+    <nav class="site-nav" aria-label="Sections">
+      <a href="#places">Places</a>
+      <a href="#about">About</a>
+      <a href="#get-in-touch">Get in touch</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="top" class="hero">
+      <img class="hero-photo" src="images/hero.jpg" alt="The 4Runner at sunset on the Malibu coast" width="2400" height="1600" fetchpriority="high">
+      <p class="side-label">Placeholder: side label</p>
+      <div class="hero-heading">
+        <h1>Placeholder: headline</h1>
+        <p class="hero-subline">Placeholder: the line under the headline</p>
+      </div>
+      <a class="pill" href="#places">Explore the places</a>
+    </section>
+
+    <!-- places.js orders the .stop blocks by their photos' data-taken days and
+         builds the counters, months, sidebar, pins and photo viewer from them. -->
+    <section id="places" class="places" aria-label="Places">
+      <div class="globe-stage">
+        <div class="globe" id="globe"></div>
+      </div>
+
+      <div class="stops">
+
+        <article class="stop" id="malibu" data-lon="-118.78" data-lat="34.03" data-zoom="9">
+          <div class="stop-panel">
+            <ul class="stop-photos">
+              <li><a href="images/stops/malibu/dscf0334.jpg"><img src="images/stops/malibu/dscf0334.jpg" alt="Two dogs on the rocks above the ocean at sunset" width="2000" height="1333" data-taken="2023-12-09" loading="lazy"></a></li>
+              <li><a href="images/stops/malibu/dscf0367.jpg"><img src="images/stops/malibu/dscf0367.jpg" alt="A hammock on the beach at golden hour" width="1333" height="2000" data-taken="2023-12-09" loading="lazy"></a></li>
+              <li><a href="images/stops/malibu/dscf0310.jpg"><img src="images/stops/malibu/dscf0310.jpg" alt="The ocean framed by a sea cave" width="1333" height="2000" data-taken="2023-12-09" loading="lazy"></a></li>
+            </ul>
+            <div class="stop-label">
+              <h2 class="stop-name">Malibu</h2>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop" id="lake-tahoe" data-lon="-120.04" data-lat="39.09" data-zoom="8.5">
+          <div class="stop-panel">
+            <ul class="stop-photos">
+              <li><a href="images/stops/lake-tahoe/dscf0510.jpg"><img src="images/stops/lake-tahoe/dscf0510.jpg" alt="Three friends in helmets and goggles on the mountain" width="2000" height="1333" data-taken="2024-01-04" loading="lazy"></a></li>
+              <li><a href="images/stops/lake-tahoe/dscf0587.jpg"><img src="images/stops/lake-tahoe/dscf0587.jpg" alt="Snowy peaks in late-afternoon light" width="1333" height="2000" data-taken="2024-01-04" loading="lazy"></a></li>
+              <li><a href="images/stops/lake-tahoe/dscf0670.jpg"><img src="images/stops/lake-tahoe/dscf0670.jpg" alt="The 4Runner and a dog in a snowy pine forest" width="2000" height="1333" data-taken="2024-01-05" loading="lazy"></a></li>
+            </ul>
+            <div class="stop-label">
+              <h2 class="stop-name">Lake Tahoe</h2>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop" id="yosemite" data-lon="-119.59" data-lat="37.75" data-zoom="9">
+          <div class="stop-panel">
+            <ul class="stop-photos">
+              <li><a href="images/stops/yosemite/dscf0157.jpg"><img src="images/stops/yosemite/dscf0157.jpg" alt="Two dogs below the granite walls of Yosemite Valley" width="1333" height="2000" data-taken="2024-12-28" loading="lazy"></a></li>
+              <li><a href="images/stops/yosemite/dscf0226.jpg"><img src="images/stops/yosemite/dscf0226.jpg" alt="Granite cliffs and a waterfall in Yosemite Valley" width="2000" height="1333" data-taken="2024-12-28" loading="lazy"></a></li>
+              <li><a href="images/stops/yosemite/dscf0289.jpg"><img src="images/stops/yosemite/dscf0289.jpg" alt="The 4Runner parked in Yosemite Valley" width="2000" height="1333" data-taken="2024-12-28" loading="lazy"></a></li>
+            </ul>
+            <div class="stop-label">
+              <h2 class="stop-name">Yosemite</h2>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop" id="alabama-hills" data-lon="-118.13" data-lat="36.61" data-zoom="9">
+          <div class="stop-panel">
+            <ul class="stop-photos">
+              <li><a href="images/stops/alabama-hills/dscf1293.jpg"><img src="images/stops/alabama-hills/dscf1293.jpg" alt="The 4Runner with its rooftop tent open below snowy peaks" width="2000" height="1333" data-taken="2025-02-15" loading="lazy"></a></li>
+              <li><a href="images/stops/alabama-hills/dscf1407.jpg"><img src="images/stops/alabama-hills/dscf1407.jpg" alt="Two dogs in coats on a boulder" width="2000" height="1333" data-taken="2025-02-15" loading="lazy"></a></li>
+              <li><a href="images/stops/alabama-hills/dscf1677.jpg"><img src="images/stops/alabama-hills/dscf1677.jpg" alt="Snowy peaks in the side mirror, with a dog at the window" width="2000" height="1333" data-taken="2025-02-16" loading="lazy"></a></li>
+            </ul>
+            <div class="stop-label">
+              <h2 class="stop-name">Alabama Hills</h2>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop" id="anza-borrego" data-lon="-116.40" data-lat="33.26" data-zoom="8.5">
+          <div class="stop-panel">
+            <ul class="stop-photos">
+              <li><a href="images/stops/anza-borrego/dscf1912.jpg"><img src="images/stops/anza-borrego/dscf1912.jpg" alt="The 4Runner with its lights on in a slot canyon" width="1333" height="2000" data-taken="2025-02-22" loading="lazy"></a></li>
+              <li><a href="images/stops/anza-borrego/dscf1928.jpg"><img src="images/stops/anza-borrego/dscf1928.jpg" alt="The 4Runner climbing through the canyon" width="2000" height="1333" data-taken="2025-02-22" loading="lazy"></a></li>
+              <li><a href="images/stops/anza-borrego/dscf1943.jpg"><img src="images/stops/anza-borrego/dscf1943.jpg" alt="The 4Runner from behind between the canyon walls" width="1333" height="2000" data-taken="2025-02-22" loading="lazy"></a></li>
+            </ul>
+            <div class="stop-label">
+              <h2 class="stop-name">Anza-Borrego</h2>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop" id="san-bernardino" data-lon="-116.95" data-lat="34.22" data-zoom="8.5">
+          <div class="stop-panel">
+            <ul class="stop-photos">
+              <li><a href="images/stops/san-bernardino/dscf3502.jpg"><img src="images/stops/san-bernardino/dscf3502.jpg" alt="Two dogs beside the 4Runner in golden light" width="1333" height="2000" data-taken="2025-10-12" loading="lazy"></a></li>
+              <li><a href="images/stops/san-bernardino/dscf3519.jpg"><img src="images/stops/san-bernardino/dscf3519.jpg" alt="The 4Runner at camp under the pines" width="1333" height="2000" data-taken="2025-10-12" loading="lazy"></a></li>
+              <li><a href="images/stops/san-bernardino/dscf3546.jpg"><img src="images/stops/san-bernardino/dscf3546.jpg" alt="A dog watching the sun set over the mountains" width="1333" height="2000" data-taken="2025-10-12" loading="lazy"></a></li>
+            </ul>
+            <div class="stop-label">
+              <h2 class="stop-name">San Bernardino National Forest</h2>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop" id="death-valley" data-lon="-116.87" data-lat="36.46" data-zoom="8">
+          <div class="stop-panel">
+            <ul class="stop-photos">
+              <li><a href="images/stops/death-valley/dsc00476.jpg"><img src="images/stops/death-valley/dsc00476.jpg" alt="The rooftop tent open on the 4Runner in the desert, a dog inside" width="1333" height="2000" data-taken="2026-02-15" loading="lazy"></a></li>
+              <li><a href="images/stops/death-valley/dsc00761.jpg"><img src="images/stops/death-valley/dsc00761.jpg" alt="A road winding through the desert hills" width="2000" height="1333" data-taken="2026-02-15" loading="lazy"></a></li>
+              <li><a href="images/stops/death-valley/dsc00846.jpg"><img src="images/stops/death-valley/dsc00846.jpg" alt="Two dogs on the colorful hills" width="1333" height="2000" data-taken="2026-02-15" loading="lazy"></a></li>
+            </ul>
+            <div class="stop-label">
+              <h2 class="stop-name">Death Valley</h2>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop" id="vietnam" data-lon="107.6" data-lat="16.4" data-zoom="4.6">
+          <div class="stop-panel">
+            <ul class="stop-photos">
+              <li><a href="images/stops/vietnam/dsc02414.jpg"><img src="images/stops/vietnam/dsc02414.jpg" alt="Limestone peaks rising from a river" width="2000" height="1333" data-taken="2026-06-15" loading="lazy"></a></li>
+              <li><a href="images/stops/vietnam/dsc02924.jpg"><img src="images/stops/vietnam/dsc02924.jpg" alt="A busy street corner" width="2000" height="1333" data-taken="2026-06-20" loading="lazy"></a></li>
+              <li><a href="images/stops/vietnam/dsc03056.jpg"><img src="images/stops/vietnam/dsc03056.jpg" alt="A street cook at the grill" width="1333" height="2000" data-taken="2026-06-22" loading="lazy"></a></li>
+            </ul>
+            <div class="stop-label">
+              <h2 class="stop-name">Vietnam</h2>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop" id="thailand" data-lon="101.0" data-lat="15.0" data-zoom="4.8">
+          <div class="stop-panel">
+            <ul class="stop-photos">
+              <li><a href="images/stops/thailand/dsc03579.jpg"><img src="images/stops/thailand/dsc03579.jpg" alt="A tuk-tuk lit up in neon at night" width="1333" height="2000" data-taken="2026-06-24" loading="lazy"></a></li>
+              <li><a href="images/stops/thailand/dsc04093.jpg"><img src="images/stops/thailand/dsc04093.jpg" alt="Bowls of noodles and sides on a table" width="2000" height="1333" data-taken="2026-06-24" loading="lazy"></a></li>
+              <li><a href="images/stops/thailand/dsc04782.jpg"><img src="images/stops/thailand/dsc04782.jpg" alt="A lantern-lined alley" width="1333" height="2000" data-taken="2026-06-25" loading="lazy"></a></li>
+            </ul>
+            <div class="stop-label">
+              <h2 class="stop-name">Thailand</h2>
+            </div>
+          </div>
+        </article>
+
+        <article class="stop" id="kauai" data-lon="-159.53" data-lat="22.06" data-zoom="8.5">
+          <div class="stop-panel">
+            <ul class="stop-photos">
+              <li><a href="images/stops/kauai/dsc08607.jpg"><img src="images/stops/kauai/dsc08607.jpg" alt="A pier in silhouette at sunset" width="2000" height="1333" data-taken="2026-09-04" loading="lazy"></a></li>
+              <li><a href="images/stops/kauai/dsc08554.jpg"><img src="images/stops/kauai/dsc08554.jpg" alt="Palm trees and an outrigger canoe on the beach" width="1333" height="2000" data-taken="2026-09-04" loading="lazy"></a></li>
+              <li><a href="images/stops/kauai/dsc08740.jpg"><img src="images/stops/kauai/dsc08740.jpg" alt="Palms above the coastline" width="2000" height="1333" data-taken="2026-09-11" loading="lazy"></a></li>
+            </ul>
+            <div class="stop-label">
+              <h2 class="stop-name">Kauai</h2>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <button class="photos-toggle" type="button" aria-pressed="false" aria-label="Hide photos" hidden>›</button>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-inner reveal-on-scroll">
+        <img class="about-photo" src="images/about.jpg" alt="Liza Garcia" width="1068" height="1200" loading="lazy">
+        <div class="about-text">
+          <h2>About</h2>
+          <p>Placeholder: Liza's bio, first paragraph.</p>
+          <p>Placeholder: Liza's bio, second paragraph.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="get-in-touch" class="get-in-touch">
+    <img class="get-in-touch-photo" src="images/get-in-touch.jpg" alt="" width="2400" height="1600" loading="lazy">
+    <div class="get-in-touch-inner reveal-on-scroll">
+      <h2>Get in touch</h2>
+      <ul class="get-in-touch-links">
+        <li><a class="pill" href="mailto:placeholder@example.com">Placeholder: email</a></li>
+        <li><a class="pill" href="https://www.instagram.com/">Placeholder: Instagram</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <dialog class="photo-viewer" aria-label="Photos">
+    <div class="photo-viewer-backdrop"></div>
+    <h2 class="photo-viewer-name"></h2>
+    <button class="photo-viewer-close" type="button" aria-label="Close">×</button>
+    <ul class="photo-viewer-strip"></ul>
+    <button class="photo-viewer-previous" type="button" aria-label="Previous photo">‹</button>
+    <button class="photo-viewer-next" type="button" aria-label="Next photo">›</button>
+    <time class="photo-viewer-date"></time>
+  </dialog>
+
+</body>
+</html>
