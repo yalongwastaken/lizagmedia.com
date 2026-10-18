@@ -15,6 +15,7 @@ const globeMap = createGlobeMap(document.getElementById("globe"));
 const stopPins = stops.map((stop) => addStopPin(globeMap, stop));
 const placesNavLinks = buildPlacesNav(document.querySelector(".globe-stage"), stops);
 labelStopPanels(stops);
+writeCountryCount(stops);
 openViewerFromStopPhotos(stops);
 photosToggle.addEventListener("click", togglePhotos);
 let currentStopIndex = null;
@@ -28,9 +29,13 @@ function readStop(stopSection) {
   if (![...stopView.center, stopView.zoom].every(Number.isFinite)) {
     throw new Error(`stop #${stopSection.id}: data-lon, data-lat and data-zoom must all be numbers`);
   }
+  if (!stopSection.dataset.country) {
+    throw new Error(`stop #${stopSection.id}: data-country must name the country the stop is in`);
+  }
   return {
     section: stopSection,
     view: stopView,
+    country: stopSection.dataset.country,
     name: stopSection.querySelector(".stop-name").textContent,
     photoLinks: [...stopSection.querySelectorAll(".stop-photos a")],
     photos: [...stopSection.querySelectorAll(".stop-photos img")].map(readPhoto),
@@ -126,6 +131,11 @@ function labelStopPanels(stopsInOrder) {
     stopLabel.prepend(stopCounter);
     stopLabel.append(stopMonths);
   });
+}
+
+function writeCountryCount(stopsInOrder) {
+  const countryCount = new Set(stopsInOrder.map((stop) => stop.country)).size;
+  document.getElementById("country-count").textContent = `${countryCount} ${countryCount === 1 ? "country" : "countries"}`;
 }
 
 function listMonthsTaken(photos) {

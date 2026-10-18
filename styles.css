@@ -170,9 +170,16 @@ h2 {
   writing-mode: vertical-rl;
   transform: translateY(-50%) rotate(180deg);
   font-size: 0.6875rem;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  text-shadow: var(--text-shadow-over-imagery);
+  /* The hero photo's sun sits behind the label; a tight dark edge keeps the
+     white text readable on white. */
+  text-shadow: 0 0 2px var(--background), 0 0 8px color-mix(in srgb, var(--background) 80%, transparent);
+}
+
+.side-label:empty {
+  display: none;
 }
 
 .side-label::before {
@@ -181,7 +188,8 @@ h2 {
   width: 1px;
   height: 96px;
   margin-block-start: 16px;
-  background: var(--rule);
+  background: currentColor;
+  box-shadow: 0 0 3px var(--background);
 }
 
 /* ---- Places: the globe stays pinned while the stops scroll over it ---- */
@@ -475,6 +483,26 @@ h2 {
 
 .about p {
   color: var(--text-muted);
+}
+
+.about-facts {
+  margin: 24px 0 0;
+}
+
+.about-facts dt {
+  margin-top: 14px;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.about-facts dt:first-child {
+  margin-top: 0;
+}
+
+.about-facts dd {
+  margin: 4px 0 0;
 }
 
 /* ---- Get in touch: mirrors the hero, its photo fading up out of the page ---- */

@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Liza Garcia</title>
-  <meta name="description" content="Placeholder: one line about Liza and the places she has been.">
+  <meta name="description" content="Photos by Liza Garcia: overlanding, camping, and travel.">
   <meta property="og:title" content="Liza Garcia">
-  <meta property="og:description" content="Placeholder: one line about Liza and the places she has been.">
+  <meta property="og:description" content="Photos by Liza Garcia: overlanding, camping, and travel.">
   <meta property="og:image" content="https://lizagmedia.com/images/hero.jpg">
   <meta property="og:url" content="https://lizagmedia.com">
   <meta property="og:type" content="website">
@@ -34,16 +34,17 @@
 
     <section id="top" class="hero">
       <img class="hero-photo" src="images/hero.jpg" alt="The 4Runner at sunset on the Malibu coast" width="2400" height="1600" fetchpriority="high">
-      <p class="side-label">Placeholder: side label</p>
+      <p class="side-label" id="country-count"></p>
       <div class="hero-heading">
-        <h1>Placeholder: headline</h1>
-        <p class="hero-subline">Placeholder: the line under the headline</p>
+        <h1>Go see it</h1>
+        <p class="hero-subline">From Death Valley to Bangkok.</p>
       </div>
       <a class="pill" href="#places">Explore the places</a>
     </section>
 
     <!-- places.js orders the .stop blocks by their photos' data-taken days and
-         builds the counters, months, sidebar, pins and photo viewer from them. -->
+         builds the counters, months, sidebar, pins, photo viewer and the
+         hero's country count from them. -->
     <section id="places" class="places" aria-label="Places">
       <div class="globe-stage">
         <div class="globe" id="globe"></div>
@@ -51,7 +52,7 @@
 
       <div class="stops">
 
-        <article class="stop" id="malibu" data-lon="-118.78" data-lat="34.03" data-zoom="9">
+        <article class="stop" id="malibu" data-country="United States" data-lon="-118.78" data-lat="34.03" data-zoom="9">
           <div class="stop-panel">
             <ul class="stop-photos">
               <li><a href="images/stops/malibu/dscf0334.jpg"><img src="images/stops/malibu/dscf0334.jpg" alt="Two dogs on the rocks above the ocean at sunset" width="2000" height="1333" data-taken="2023-12-09" loading="lazy"></a></li>
@@ -64,7 +65,7 @@
           </div>
         </article>
 
-        <article class="stop" id="lake-tahoe" data-lon="-120.04" data-lat="39.09" data-zoom="8.5">
+        <article class="stop" id="lake-tahoe" data-country="United States" data-lon="-120.04" data-lat="39.09" data-zoom="8.5">
           <div class="stop-panel">
             <ul class="stop-photos">
               <li><a href="images/stops/lake-tahoe/dscf0510.jpg"><img src="images/stops/lake-tahoe/dscf0510.jpg" alt="Three friends in helmets and goggles on the mountain" width="2000" height="1333" data-taken="2024-01-04" loading="lazy"></a></li>
@@ -77,7 +78,7 @@
           </div>
         </article>
 
-        <article class="stop" id="yosemite" data-lon="-119.59" data-lat="37.75" data-zoom="9">
+        <article class="stop" id="yosemite" data-country="United States" data-lon="-119.59" data-lat="37.75" data-zoom="9">
           <div class="stop-panel">
             <ul class="stop-photos">
               <li><a href="images/stops/yosemite/dscf0157.jpg"><img src="images/stops/yosemite/dscf0157.jpg" alt="Two dogs below the granite walls of Yosemite Valley" width="1333" height="2000" data-taken="2024-12-28" loading="lazy"></a></li>
@@ -90,7 +91,7 @@
           </div>
         </article>
 
-        <article class="stop" id="alabama-hills" data-lon="-118.13" data-lat="36.61" data-zoom="9">
+        <article class="stop" id="alabama-hills" data-country="United States" data-lon="-118.13" data-lat="36.61" data-zoom="9">
           <div class="stop-panel">
             <ul class="stop-photos">
               <li><a href="images/stops/alabama-hills/dscf1293.jpg"><img src="images/stops/alabama-hills/dscf1293.jpg" alt="The 4Runner with its rooftop tent open below snowy peaks" width="2000" height="1333" data-taken="2025-02-15" loading="lazy"></a></li>
@@ -103,7 +104,7 @@
           </div>
         </article>
 
-        <article class="stop" id="anza-borrego" data-lon="-116.40" data-lat="33.26" data-zoom="8.5">
+        <article class="stop" id="anza-borrego" data-country="United States" data-lon="-116.40" data-lat="33.26" data-zoom="8.5">
           <div class="stop-panel">
             <ul class="stop-photos">
               <li><a href="images/stops/anza-borrego/dscf1912.jpg"><img src="images/stops/anza-borrego/dscf1912.jpg" alt="The 4Runner with its lights on in a slot canyon" width="1333" height="2000" data-taken="2025-02-22" loading="lazy"></a></li>
@@ -116,7 +117,7 @@
           </div>
         </article>
 
-        <article class="stop" id="san-bernardino" data-lon="-116.95" data-lat="34.22" data-zoom="8.5">
+        <article class="stop" id="san-bernardino" data-country="United States" data-lon="-116.95" data-lat="34.22" data-zoom="8.5">
           <div class="stop-panel">
             <ul class="stop-photos">
               <li><a href="images/stops/san-bernardino/dscf3502.jpg"><img src="images/stops/san-bernardino/dscf3502.jpg" alt="Two dogs beside the 4Runner in golden light" width="1333" height="2000" data-taken="2025-10-12" loading="lazy"></a></li>
@@ -129,7 +130,7 @@
           </div>
         </article>
 
-        <article class="stop" id="death-valley" data-lon="-116.87" data-lat="36.46" data-zoom="8">
+        <article class="stop" id="death-valley" data-country="United States" data-lon="-116.87" data-lat="36.46" data-zoom="8">
           <div class="stop-panel">
             <ul class="stop-photos">
               <li><a href="images/stops/death-valley/dsc00476.jpg"><img src="images/stops/death-valley/dsc00476.jpg" alt="The rooftop tent open on the 4Runner in the desert, a dog inside" width="1333" height="2000" data-taken="2026-02-15" loading="lazy"></a></li>
@@ -142,7 +143,7 @@
           </div>
         </article>
 
-        <article class="stop" id="vietnam" data-lon="107.6" data-lat="16.4" data-zoom="4.6">
+        <article class="stop" id="vietnam" data-country="Vietnam" data-lon="107.6" data-lat="16.4" data-zoom="4.6">
           <div class="stop-panel">
             <ul class="stop-photos">
               <li><a href="images/stops/vietnam/dsc02414.jpg"><img src="images/stops/vietnam/dsc02414.jpg" alt="Limestone peaks rising from a river" width="2000" height="1333" data-taken="2026-06-15" loading="lazy"></a></li>
@@ -155,7 +156,7 @@
           </div>
         </article>
 
-        <article class="stop" id="thailand" data-lon="101.0" data-lat="15.0" data-zoom="4.8">
+        <article class="stop" id="thailand" data-country="Thailand" data-lon="101.0" data-lat="15.0" data-zoom="4.8">
           <div class="stop-panel">
             <ul class="stop-photos">
               <li><a href="images/stops/thailand/dsc03579.jpg"><img src="images/stops/thailand/dsc03579.jpg" alt="A tuk-tuk lit up in neon at night" width="1333" height="2000" data-taken="2026-06-24" loading="lazy"></a></li>
@@ -168,7 +169,7 @@
           </div>
         </article>
 
-        <article class="stop" id="kauai" data-lon="-159.53" data-lat="22.06" data-zoom="8.5">
+        <article class="stop" id="kauai" data-country="United States" data-lon="-159.53" data-lat="22.06" data-zoom="8.5">
           <div class="stop-panel">
             <ul class="stop-photos">
               <li><a href="images/stops/kauai/dsc08607.jpg"><img src="images/stops/kauai/dsc08607.jpg" alt="A pier in silhouette at sunset" width="2000" height="1333" data-taken="2026-09-04" loading="lazy"></a></li>
@@ -191,8 +192,15 @@
         <img class="about-photo" src="images/about.jpg" alt="Liza Garcia" width="1068" height="1200" loading="lazy">
         <div class="about-text">
           <h2>About</h2>
-          <p>Placeholder: Liza's bio, first paragraph.</p>
-          <p>Placeholder: Liza's bio, second paragraph.</p>
+          <p>I'm Liza, a Bay Area native living in San Diego. Outdoor enthusiast, always traveling, always up for the next adventure. Since 2023 I've camped out of the 4Runner from Malibu to Death Valley, taken winter trips to Lake Tahoe and Yosemite, and traveled to Vietnam, Thailand, and Kauai. These are the photos.</p>
+          <dl class="about-facts">
+            <dt>Car</dt>
+            <dd>2023 Toyota 4Runner TRD Pro · Ice Cap</dd>
+            <dt>Cameras</dt>
+            <dd>Fujifilm X100V · Sony a7C II</dd>
+            <dt>Copilots</dt>
+            <dd>Russel · dvnger · Britney</dd>
+          </dl>
         </div>
       </div>
     </section>
@@ -204,8 +212,9 @@
     <div class="get-in-touch-inner reveal-on-scroll">
       <h2>Get in touch</h2>
       <ul class="get-in-touch-links">
-        <li><a class="pill" href="mailto:placeholder@example.com">Placeholder: email</a></li>
-        <li><a class="pill" href="https://www.instagram.com/">Placeholder: Instagram</a></li>
+        <li><a class="pill" href="mailto:lizagmedia@gmail.com">lizagmedia@gmail.com</a></li>
+        <li><a class="pill" href="https://www.instagram.com/lizagphoto/" target="_blank" rel="noopener noreferrer">@lizagphoto</a></li>
+        <li><a class="pill" href="https://www.instagram.com/icy4rnr/" target="_blank" rel="noopener noreferrer">@icy4rnr</a></li>
       </ul>
     </div>
     <p class="site-credit">© Liza Garcia · lizagmedia.com · Site by <a href="https://github.com/yalongwastaken" target="_blank" rel="noopener noreferrer">Anthony Yalong</a></p>

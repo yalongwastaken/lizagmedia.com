@@ -14,12 +14,13 @@ an about section, and a get-in-touch footer. The top bar stays on screen and
 underlines the section crossing the middle of the screen.
 
 Each place is one `<article class="stop">` in `index.html`. Its `data-lon`,
-`data-lat`, and `data-zoom` say where the globe flies, and the block holds the
-place's name and photos, each photo carrying the day it was taken in
-`data-taken`. Those days are the only dates in the repo: `places.js` orders the
-stops by their earliest photo and writes each stop's months from its photos, so
-a stop whose photos span months lists each one. It also pins every stop on the
-globe and builds the sidebar and the `04 / 10` counters.
+`data-lat`, and `data-zoom` say where the globe flies, `data-country` names the
+country it is in, and the block holds the place's name and photos, each photo
+carrying the day it was taken in `data-taken`. Those days are the only dates in
+the repo: `places.js` orders the stops by their earliest photo and writes each
+stop's months from its photos, so a stop whose photos span months lists each
+one. It also pins every stop on the globe, builds the sidebar and the `04 / 10`
+counters, and counts the stops' countries for the hero.
 
 The stop crossing the middle of the screen is the current one, and the globe
 flies to it; before the first stop and after the last, the globe shows the whole
@@ -74,13 +75,14 @@ globe: browsers do not load module scripts or the map's worker from `file://`.
 
 1. Export its photos into `images/stops/<stop>/`, as below.
 2. Copy one `<article class="stop">` block anywhere in the list in
-   `index.html`; the page orders stops by date. Set its `id`, `data-lon` and
-   `data-lat` (decimal degrees; south and west are negative), and `data-zoom`
-   (about 8 to 9 for a park, 4 to 5 for a country), then the name and, for each
-   photo, the link and `src`, `alt`, `width`, `height`, and `data-taken`.
+   `index.html`; the page orders stops by date. Set its `id`, `data-country`,
+   `data-lon` and `data-lat` (decimal degrees; south and west are negative),
+   and `data-zoom` (about 8 to 9 for a park, 4 to 5 for a country), then the
+   name and, for each photo, the link and `src`, `alt`, `width`, `height`, and
+   `data-taken`.
 
-The order, the months, the sidebar entry, the counter, and the pin follow from
-the block.
+The order, the months, the sidebar entry, the counter, the pin, and the hero's
+country count follow from the block.
 
 ### Export a Photo
 
